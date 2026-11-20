@@ -1,0 +1,29 @@
+import { useEffect, useState } from 'react';
+import Landing from './components/Landing.jsx';
+import Viewer from './components/Viewer.jsx';
+import Vivo from './components/Vivo.jsx';
+import Profesor from './components/Profesor.jsx';
+
+const route = () => (location.hash.split('?')[0] || '#/').replace(/^#/, '') || '/';
+const NAV = [['/', 'Inicio'], ['/vivo', 'Mi sesión'], ['/presentacion', 'Presentación'], ['/profesor', 'Profesor']];
+
+export default function App() {
+  const [r, setR] = useState(route());
+  useEffect(() => {
+    const on = () => setR(route());
+    window.addEventListener('hashchange', on);
+    return () => window.removeEventListener('hashchange', on);
+  }, []);
+  const Page = { '/presentacion': Viewer, '/vivo': Vivo, '/actividades': Vivo, '/profesor': Profesor }[r] || Landing;
+  return (
+    <>
+      {r !== '/profesor' && (
+        <header className="topbar">
+          <a className="logo" href="#/"><i aria-hidden="true" />DS2 · Semana 10</a>
+          <nav>{NAV.map(([h, t]) => <a key={h} href={`#${h}`} aria-current={r === h ? 'page' : undefined}>{t}</a>)}</nav>
+        </header>
+      )}
+      <Page key={r} />
+    </>
+  );
+}
