@@ -13,11 +13,11 @@ export function Receso() {
       <h1>Pausa de 10 minutos</h1>
       <p className="d-reloj mono" aria-live="polite">{mm}:{ss}</p>
       {!fin ? <button className="btn" onClick={() => setFin(Date.now() + 10 * 60 * 1000)}>Iniciar cuenta regresiva</button>
-        : resta === 0 ? <p className="d-preg">¡Volvemos! Seguimos con la gestión del proyecto: lo que nos dicen los datos del capstone.</p>
-        : <p className="d-sub">Al volver: gestión del proyecto con datos reales, la actividad 3, los entregables finales y el podio.</p>}
+        : resta === 0 ? <p className="d-preg">¡Volvemos! Seguimos con la gestión de la semana de integración: el congelamiento y los riesgos.</p>
+        : <p className="d-sub">Al volver: el congelamiento y los riesgos de la semana, la actividad 3, la evaluación final y el podio.</p>}
       <div className="d-break-tip">
         <span className="mono">Mientras tanto</span>
-        <p>Abre el milestone de un sprint de tu equipo (Plan → Milestones): ¿cómo se ve su burndown? Lo usamos en el tema 3.</p>
+        <p>Abre la página Demo de tu módulo en la wiki: ¿ya tiene el reparto de los 15 minutos y los datos de prueba?</p>
       </div>
     </div>
   );
@@ -25,9 +25,9 @@ export function Receso() {
 
 /** Línea de tiempo de la sesión de 120 minutos. */
 export const AGENDA = [
-  [0, 10, 'Inicio + Actividad 1', '#FF8A3D', 'a'], [10, 30, 'Tema 1 · Demostración del producto', '#FF8A3D', 't'], [30, 50, 'Tema 2 · Versionado de software', '#C6F33A', 't'],
-  [50, 60, 'Actividad 2', '#FFD166', 'a'], [60, 70, 'Receso', '#3A4152', 'b'], [70, 90, 'Tema 3 · Gestión del proyecto', '#6EA8FF', 't'],
-  [90, 95, 'Actividad 3', '#FFD166', 'a'], [95, 113, 'Tema 4 · Entregables del proyecto', '#B78CFF', 't'],
+  [0, 10, 'Inicio + Actividad 1', '#FF8A3D', 'a'], [10, 30, 'Tema 1 · La demo (Lab 9)', '#FF8A3D', 't'], [30, 50, 'Tema 2 · La versión 1.0.0 (Lab 9)', '#C6F33A', 't'],
+  [50, 60, 'Actividad 2', '#FFD166', 'a'], [60, 70, 'Receso', '#3A4152', 'b'], [70, 90, 'Tema 3 · Gestión de la integración', '#6EA8FF', 't'],
+  [90, 95, 'Actividad 3', '#FFD166', 'a'], [95, 113, 'Tema 4 · La evaluación final', '#B78CFF', 't'],
   [113, 118, 'Actividad 4', '#FFD166', 'a'], [118, 120, 'Cierre y podio', '#B78CFF', 'c'],
 ];
 export function Agenda() {

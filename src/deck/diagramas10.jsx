@@ -81,7 +81,7 @@ export function TagLinea() {
     ['v0.2.0', '01/11', 'Cierre del Sprint 1 · 11 MR', 'hecho'],
     ['v0.3.0', '08/11', 'Cierre del Sprint 2 · 50 MR', 'hecho'],
     ['v0.4.0', '15/11', 'Cierre del Sprint 3 · 16 MR', 'hecho'],
-    ['v0.5.0', '22/11', 'Cierre del Sprint 4', 'prox'],
+    ['v0.5.0', '22/11', 'Cierre del Sprint 4 · 18 MR', 'hecho'],
     ['v1.0.0', '30/11', 'La demo: primera versión estable', 'meta'],
   ];
   return (
@@ -120,7 +120,7 @@ export function Triangulo() {
 
 /** MR fusionados por sprint en el capstone. */
 export function BarrasSprint() {
-  const s = [['Sprint 1', 11, '2 semanas'], ['Sprint 2', 50, '1 semana'], ['Sprint 3', 16, '1 semana'], ['Sprint 4', 12, 'hasta el 20/11']];
+  const s = [['Sprint 1', 11, '2 semanas'], ['Sprint 2', 50, '1 semana'], ['Sprint 3', 16, '1 semana'], ['Sprint 4', 18, '1 semana']];
   const max = 50;
   return (
     <div className="dg10-bars">
@@ -139,11 +139,11 @@ export function BarrasSprint() {
 /** Matriz de riesgos con riesgos reales del capstone. */
 export function MatrizRiesgo() {
   const riesgos = [
-    ['Un contrato (OrderService) llega tarde', 2, 2],
-    ['Conflictos al hacer rebase', 2, 1],
-    ['La documentación la sostiene una persona', 1, 2],
-    ['Historias cerradas sin MR fusionado', 1, 1],
-    ['Persistencia JPA sin probar con MySQL', 0, 2],
+    ['OrderService sin fusionar bloquea a Entregas', 2, 2],
+    ['Pipelines de los módulos sin fusionar', 2, 1],
+    ['Sin acuerdo de congelamiento antes del 25/11', 1, 2],
+    ['La demo con MySQL sin ensayar', 1, 2],
+    ['Un integrante no puede explicar su código', 1, 1],
   ];
   const nivel = (p, i) => (p + i >= 3 ? 'alto' : p + i >= 2 ? 'medio' : 'bajo');
   return (
@@ -165,8 +165,8 @@ export function MatrizRiesgo() {
 export function Entregables() {
   const grupos = [
     ['Repositorio', '#C6F33A', ['Código de los 4 módulos en main', 'Pipeline en verde: lint, pruebas, cobertura, artefactos', 'Tag v1.0.0 en el commit de la demo']],
-    ['Wiki del módulo', '#6EA8FF', ['4P’s, casos de uso y plan de acción', 'Actas y Seguimiento de los Sprints 1 a 4', 'Patrones, Pruebas-unitarias, Pipeline-CI y Revision-de-codigo']],
-    ['Release y demo', '#B78CFF', ['Release v1.0.0 con notas de la versión y el jar', 'Guion de la demo y datos de prueba', 'La demo en vivo y las preguntas']],
+    ['Wiki del módulo', '#6EA8FF', ['4P’s, casos de uso, actas y Seguimiento de cada sprint', 'Patrones, Pruebas-unitarias, Pipeline-CI y Revision-de-codigo', 'Demo y Release-1.0.0 (Lab 9)']],
+    ['Release y evaluación', '#B78CFF', ['Release v1.0.0 con el jar de delivery-system', 'Diapositivas de la demo en Canvas', 'Demo (30/11), revisión técnica (1/12) y sesión conjunta (2/12)']],
   ];
   return (
     <div className="dg10-ent">
