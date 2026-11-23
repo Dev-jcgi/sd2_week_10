@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "DS2 Semana 10 · Laboratorio 9 (demo y versión 1.0.0), semana de integración y evaluación final del capstone Delivery System",
+  "description": "DS2 Semana 10 · Demostración del producto, versionado de software, gestión de proyectos y entregables del capstone Delivery System",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

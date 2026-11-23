@@ -4,10 +4,10 @@ import { TEMAS } from '../data/temas.js';
 
 const WIKI = 'https://gitlab.com/jala-university1/cohort-7/ES.CO.CSSD-125.GA.T2.26.M2/SE/capstone/-/wikis';
 const ENLACES = [
-  ['Guía del Laboratorio semana 9', `${WIKI}/Gu%C3%ADas/Laboratorio-semana-9`, 't1'],
+  ['Wiki del capstone', `${WIKI}/home`, 't4'],
   ['Tags y versiones del capstone', 'https://gitlab.com/jala-university1/cohort-7/ES.CO.CSSD-125.GA.T2.26.M2/SE/capstone/-/tags', 't2'],
-  ['Integración, pruebas y demo (pendientes)', 'https://jcgi.lat/sd2_pendientes/pendientes-integracion.html', 't3'],
-  ['Evaluación final: rúbrica y preguntas', 'https://jcgi.lat/sd2_pendientes/evaluacion-final.html', 't4'],
+  ['Milestones y burndown', 'https://gitlab.com/jala-university1/cohort-7/ES.CO.CSSD-125.GA.T2.26.M2/SE/capstone/-/milestones', 't3'],
+  ['Pendientes del Sprint 4', 'https://jcgi.lat/sd2_pendientes/pendientes-sprint-4.html', 't1'],
   ['Semantic Versioning 2.0.0', 'https://semver.org/lang/es/', 't2'],
 ];
 const COLOR = Object.fromEntries(TEMAS.map((t) => [t.id, t.color]));
@@ -23,7 +23,7 @@ export default function Landing() {
       <section className="wrap hero6" ref={hero}>
         <p className="eyebrow">Desarrollo de Software 2 · Sección E · Semana 10 · Capstone Delivery System</p>
         <h1 className="display">De la demo a la <em>versión 1.0</em>.</h1>
-        <p className="lead">Qué se entrega en el Laboratorio 9, cómo se prepara la demo, cómo se publica la versión 1.0.0 y cómo se evalúa a cada uno el 30/11, el 1/12 y el 2/12, con el Delivery System como ejemplo.</p>
+        <p className="lead">Cómo se demuestra el producto, cómo se le pone número a cada versión, qué nos enseñó la gestión del capstone y qué se entrega al final, con el Delivery System como ejemplo.</p>
         <div className="cta">
           <a className="btn" href="#/profesor">Crear la sesión (profesor)</a>
           <a className="btn ghost" href="#/presentacion">Ver la presentación</a>
